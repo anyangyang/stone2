@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="stone2:war exploded">
+    <output-path>$PROJECT_DIR$/../stone2/target/anyang</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="stone2" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.9" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../stone2/target/anyang/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="stone2/web/Web" />
+    </root>
+  </artifact>
+</component>
