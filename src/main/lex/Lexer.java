@@ -26,6 +26,10 @@ public class Lexer extends BufferReader {
         reserve(new KeyWord("break", Tag.BREAK.getCode()));
         reserve(KeyWord.True);
         reserve(KeyWord.False);
+        reserve(Type.Int);
+        reserve(Type.Char);
+        reserve(Type.Float);
+        reserve(Type.Bool);
     }
 
     public void reserve(KeyWord word) {
@@ -127,7 +131,7 @@ public class Lexer extends BufferReader {
     private void skipWhiteSpace() throws IOException {
         getChar();
         for (; ; getChar()) {
-            if (this.peek == ' ' || this.peek == '\t') {
+            if (this.peek == ' ' || this.peek == '\t' || this.peek == '\r') {
                 continue;
             } else if (this.peek == '\n') {
                 line++;
