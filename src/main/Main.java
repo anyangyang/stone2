@@ -12,7 +12,7 @@ public class Main {
 
     private static final String fileName = "E:\\stone2\\src\\example\\test.txt";
 
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws Exception{
         if (StringUtils.isBlank(fileName)) {
             throw new RuntimeException("file name is null");
         }
