@@ -1,5 +1,8 @@
 package main.lex;
 
+import org.apache.commons.lang3.StringUtils;
+
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,6 +21,18 @@ public class BufferReader {
 
     public BufferReader(FileInputStream reader) {
         this.reader = reader;
+    }
+
+    public BufferReader(String infile) throws IOException{
+        if (StringUtils.isBlank(infile)) {
+            throw new RuntimeException("file name is null");
+        }
+
+        File file = new File(infile);
+        if (!file.exists()) {
+            throw new RuntimeException("file [ " + infile + " ] not found");
+        }
+        FileInputStream fs = new FileInputStream(file);
     }
     /**
      * 读取一个字符

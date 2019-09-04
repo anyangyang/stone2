@@ -6,6 +6,8 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.Reader;
 
 public class Main {
 
@@ -13,23 +15,33 @@ public class Main {
     private static final String fileName = "E:\\stone2\\src\\example\\test.txt";
 
     public static void main(String[] args) throws Exception{
-        if (StringUtils.isBlank(fileName)) {
+        FileInputStream reader = initReader(fileName);
+        try{
+            Lexer lexer = new Lexer(reader);
+            Token token = lexer.nextToken();
+            for(; token.tag >= 0; token = lexer.nextToken()) {
+                System.out.println(token.toString());
+            }
+        } finally {
+            if(reader != null) {
+                reader.close();
+            }
+        }
+
+
+
+    }
+
+    public static FileInputStream initReader(String infile) throws IOException {
+        if (StringUtils.isBlank(infile)) {
             throw new RuntimeException("file name is null");
         }
 
-        File file = new File(fileName);
+        File file = new File(infile);
         if (!file.exists()) {
-            throw new RuntimeException("file [ " + fileName + " ] not found");
-        }
-        FileInputStream fs = new FileInputStream(file);
-
-        Lexer lexer = new Lexer(fs);
-
-        Token token = lexer.nextToken();
-        for(; token.tag >= 0; token = lexer.nextToken()) {
-            System.out.println(token.toString());
+            throw new RuntimeException("file [ " + infile + " ] not found");
         }
 
-        fs.close();
+       return  new FileInputStream(file);
     }
 }
