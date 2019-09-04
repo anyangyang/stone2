@@ -10,4 +10,6 @@ public class Token {
     public String toString() {
         return "" +(char) tag;
     }
+
+    public static Token EOF = new Token(-1);
 }

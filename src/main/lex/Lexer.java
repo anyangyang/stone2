@@ -1,10 +1,11 @@
 package main.lex;
 
-import org.apache.commons.lang3.StringUtils;
-
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -15,6 +16,9 @@ public class Lexer extends BufferReader {
     private Map<String, KeyWord> words = new HashMap();
 
     private BigDecimal ten = new BigDecimal(10);
+
+    // 缓存 token
+    private List<Token> tokenBuf = new ArrayList<Token>(BUFF_SIZE);
 
     public Lexer(FileInputStream reader) throws Exception {
         super(reader);
@@ -52,11 +56,14 @@ public class Lexer extends BufferReader {
                 return next('=') ? KeyWord.le : new Token('<');
             case '>':
                 return next('=') ? KeyWord.ge : new Token('>');
+            case -1:
+                return Token.EOF;
             default:
+                // 数字
                 if (isDigit()) {
                     return readNum();
                 }
-
+                // 变量
                 if (isLetter()) {
                     return readId();
                 }
@@ -131,14 +138,44 @@ public class Lexer extends BufferReader {
     private void skipWhiteSpace() throws IOException {
         getChar();
         for (; ; getChar()) {
-            if (this.peek == ' ' || this.peek == '\t' || this.peek == '\r') {
+            // TODO 跳过行注释和块注释
+
+            if (this.peek == ' ' || this.peek == '\t') {
                 continue;
-            } else if (this.peek == '\n') {
+            } else if (this.peek == '\n' || this.peek == '\r') {
                 line++;
             } else {
                 break;
             }
         }
+    }
+
+    /**
+     * 获取 token，如果缓存中存在未消费的token，
+     * 优先从缓存中获取
+     *
+     * @return
+     * @throws IOException
+     */
+    public Token peekToken() throws IOException {
+        if (tokenBuf.size() > 0) {
+            return tokenBuf.remove(tokenBuf.size() - 1);     // remove
+        }
+
+        return nextToken();
+    }
+
+    /**
+     * 将未消费完成 token 存放到缓存中
+     *
+     * @param token
+     */
+    public void unGetToken(Token token) {
+        if(token == null) {
+            return;
+        }
+
+        tokenBuf.add(token);
     }
 
 

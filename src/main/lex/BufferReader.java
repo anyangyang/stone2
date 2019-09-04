@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BufferReader {
-    private static final int BUFF_SIZE = 4;
+    protected static final int BUFF_SIZE = 4;
     // 用于缓存从文件中读取的字符
    private List<Integer> buf = new ArrayList<Integer>(BUFF_SIZE);
    // 输入流
@@ -38,11 +38,13 @@ public class BufferReader {
 
     public boolean next(int expectCh) throws IOException {
          getChar();
+         Boolean match = true;
          if(this.peek != expectCh) {
-             return false;
+             ungetCh();
+             match = false;
          }
 
          this.peek = -1;
-         return true;
+         return match;
     }
 }
