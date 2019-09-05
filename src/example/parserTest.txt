@@ -1,0 +1,6 @@
+{
+    int a;
+    int b;
+    char[2][5][6] c;
+    float j;
+}

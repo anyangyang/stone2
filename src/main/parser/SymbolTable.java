@@ -1,10 +1,9 @@
 package main.parser;
 
-import main.ast.Id;
+import main.ast.IdNode;
 import main.lexer.Token;
 
 import java.util.HashMap;
-import java.util.Hashtable;
 
 /**
  *  简单的符号表
@@ -14,16 +13,17 @@ public class SymbolTable {
     public SymbolTable prev;   // 外层的符号表
 
     public SymbolTable(SymbolTable prev) {
-            this.prev = prev;
+        this.map = new HashMap();
+        this.prev = prev;
     }
 
-    public void put(Token token, Id id) {
-        map.put(token, id);
+    public void put(Token token, IdNode idNode) {
+        map.put(token, idNode);
     }
 
-    public Id get(Token token) {
+    public IdNode get(Token token) {
         for(SymbolTable table = this; table != null; table = table.prev) {
-            Id found = table.get(token);
+            IdNode found = table.get(token);
             if(found != null) {
                 return found;
             }

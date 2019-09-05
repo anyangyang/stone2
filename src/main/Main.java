@@ -2,6 +2,7 @@ package main;
 
 import main.lexer.Lexer;
 import main.lexer.Token;
+import main.parser.Parser;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
@@ -12,24 +13,26 @@ import java.io.Reader;
 public class Main {
 
     // windows 下 lexer 测试文件
-    private static final String fileName = "E:\\stone2\\src\\example\\test.txt";
+    private static final String lexTestFileName = "E:\\stone2\\src\\example\\test.txt";
+
+    private static final String parserTestFileName = "E:\\stone2\\src\\example\\parserTest.txt";
 
     public static void main(String[] args) throws Exception{
-        FileInputStream reader = initReader(fileName);
+        FileInputStream reader = initReader(parserTestFileName);
         try{
             Lexer lexer = new Lexer(reader);
-            Token token = lexer.nextToken();
-            for(; token.tag >= 0; token = lexer.nextToken()) {
-                System.out.println(token.toString());
-            }
+//            Token token = lexer.nextToken();
+//            for(; token.tag >= 0; token = lexer.nextToken()) {
+//                System.out.println(token.toString());
+//            }
+            Parser parser = new Parser(lexer);
+            parser.parser();
+
         } finally {
             if(reader != null) {
                 reader.close();
             }
         }
-
-
-
     }
 
     public static FileInputStream initReader(String infile) throws IOException {
