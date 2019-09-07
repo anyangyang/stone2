@@ -1,6 +1,6 @@
 package main.parser;
 
-import main.ast.IdNode;
+import main.ast.*;
 import main.constants.CommonConst;
 import main.lexer.*;
 
@@ -27,7 +27,7 @@ public class Parser {
 
     public Parser(Lexer lexer) throws IOException {
         this.lexer = lexer;
-        getToken();
+        move();
     }
 
     /**
@@ -52,7 +52,7 @@ public class Parser {
      *
      * @throws IOException
      */
-    public void block() throws IOException {
+    public List<StmtNode> block() throws IOException {
         match('{');
         // 创建当前作用域对应的符号表
         SymbolTable saveTable = this.curTable;
@@ -60,9 +60,104 @@ public class Parser {
         // 处理声明
         decls();
         // 处理语句
-//        stmts();
+        List<StmtNode> stmtList = stmts();
         this.curTable = saveTable;  // 恢复符号表
         match('}');
+
+        return stmtList;
+    }
+
+    /**
+     * 解析语句
+     */
+    private List<StmtNode> stmts() throws IOException {
+        List<StmtNode> stmtList = new ArrayList<StmtNode>();
+        // 如果是结束符号
+        if (this.look.tag == '}') {
+            stmtList.add(StmtNode.Null);     // 其实空语句可以不用加
+            return stmtList;
+        }
+
+        // 开始循环解析
+        while (this.look.tag != '}') {
+            stmt(stmtList);
+        }
+
+        return stmtList;
+    }
+
+    /**
+     * 解析语句
+     *
+     * @return
+     */
+    private void stmt(List<StmtNode> stmtList) throws IOException {
+
+        StmtNode stmt = null;
+        switch (this.look.tag) {
+            // 空语句
+            case ';':
+                stmtList.add(StmtNode.Null);
+                move();
+                break;
+            //if语句
+            case Tag.IF:
+                stmtList.add(ifStmt());
+                break;
+            // do while 语句
+            case Tag.DO:
+                stmtList.add(doStmt());
+                break;
+            // while 语句
+            case Tag.WHILE:
+                stmtList.add(whileStmt());
+                break;
+            // 块
+            case '{':
+                stmtList.addAll(block());
+                break;
+            // break 语句
+            case Tag.BREAK:
+                stmtList.add(new BreakStmt());
+                break;
+            // 赋值
+            default:
+                stmtList.add(assignStmt());
+                break;
+        }
+    }
+
+    private StmtNode doStmt() {
+        return null;
+    }
+
+    private StmtNode whileStmt() {
+        return null;
+    }
+
+    private StmtNode assignStmt() {
+        return null;
+    }
+
+    /**
+     * 处理 if 语句
+     *
+     * @return
+     */
+    private StmtNode ifStmt() throws IOException {
+        List<StmtNode> ifBody = new ArrayList<>(), elseBody = null;
+        move();
+        match('(');
+        ExprNode boolExpr = bool();     // 解析布尔表达式
+        match(')');
+        stmt(ifBody);
+        if (this.look.tag == Tag.ELSE) {
+            elseBody = new ArrayList<>();
+            stmt(elseBody);
+        }
+
+        move();
+        return new IfStmt(boolExpr, ifBody, elseBody);
     }
 
     /**
@@ -73,10 +168,10 @@ public class Parser {
         /**
          * 如果是变量声明,，每次解析一个变量声明
          */
-        while (look.tag == Tag.BASIC.getCode()) {
+        while (look.tag == Tag.BASIC) {
             Type type = getType();
             Token word = this.look;
-            match(Tag.ID.getCode());
+            match(Tag.ID);
             match(';');
 
             IdNode idNode = new IdNode(word, type, offset);
@@ -93,36 +188,37 @@ public class Parser {
      */
     private Type getType() throws IOException {
         Type basicType = (Type) this.look;    // 基础类型 int char float bool
-        getToken();
-        if(this.look.tag != '[') {
-           return basicType;
+        move();
+        if (this.look.tag != '[') {
+            return basicType;
         }
         // 解析数组
         return getArrayType(basicType);
     }
 
     /**
-     *  数组的定义：  basicType[num]
+     * 数组的定义：  basicType[num]
+     *
      * @param basicType
      * @return
      * @throws IOException
      */
     private Type getArrayType(Type basicType) throws IOException {
-        getToken();
+        move();
         Token num = this.look;
         /**
          *  这里会有一点小问题 ，基于之前 lex 时，real 类型
          *  的 tag 也是 num
          *  TODO:  区分实数和整数
          */
-        match(Tag.NUM.getCode());
+        match(Tag.NUM);
         match(']');
         // 如果是多维数组
-        if(this.look.tag == '[') {
+        if (this.look.tag == '[') {
             basicType = getArrayType(basicType);
         }
 
-        return new Array(basicType,  ((Num)num).value);
+        return new Array(basicType, ((Num) num).value);
     }
 
 
@@ -133,13 +229,12 @@ public class Parser {
      * @return
      * @throws IOException
      */
-    public void getToken() throws IOException {
+    public Token getToken() throws IOException {
         if (tokenBuf.size() > 0) {
-            this.look = tokenBuf.remove(tokenBuf.size() - 1);     // remove
-            return;
+            return tokenBuf.remove(tokenBuf.size() - 1);     // remove
         }
 
-        this.look = lexer.nextToken();
+        return lexer.nextToken();
     }
 
     /**
@@ -150,13 +245,17 @@ public class Parser {
         this.look = null;
     }
 
+    public void move() throws IOException {
+        this.look = this.getToken();
+    }
+
 
     public void match(int t) throws IOException {
         if (this.look.tag != t) {
             error("syntax error， expect " + ((char) t));
         }
 
-        getToken();
+        move();
     }
 
     /**
@@ -166,6 +265,105 @@ public class Parser {
      */
     private void error(String errMsg) {
         throw new RuntimeException("near line " + Lexer.line + ": " + errMsg);
+    }
+
+
+    /******************* 递归处理优先级高的运算符 **************************/
+
+    /**
+     * 解析 bool 表达式
+     * bool ----->   join || bool
+     * join
+     *
+     * @return
+     */
+    private ExprNode bool() throws IOException {
+        ExprNode x = join();
+        while (this.look.tag == Tag.OR) {
+            Token op = this.look;
+            move();
+            x = new OrExpr(op, x, join());
+        }
+        return x;
+    }
+
+    /**
+     * join  ---->   equality && joiin
+     * equality
+     *
+     * @return
+     * @throws IOException
+     */
+    private ExprNode join() throws IOException {
+        ExprNode x = equality();
+        while (this.look.tag == Tag.AND) {
+            Token op = this.look;
+            move();
+            x = new AndExpr(op, x, equality());
+        }
+        return x;
+    }
+
+    /**
+     * equality --- > rel  == equality
+     * rel
+     *
+     * @return
+     * @throws IOException
+     */
+    private ExprNode equality() throws IOException {
+        ExprNode x = rel();
+        while (this.look.tag == Tag.EQ || this.look.tag == Tag.NE) {
+            Token op = this.look;
+            move();
+            x = new AndExpr(op, x, rel());
+        }
+        return x;
+    }
+
+    /**
+     * TODO 暂时不支持非空为真或者非零为真的判断
+     *
+     * @return
+     * @throws IOException
+     */
+    private ExprNode rel() throws IOException {
+        ExprNode x = expr();
+        switch (this.look.tag) {
+            case '<':
+            case '>':
+            case Tag.GE:
+            case Tag.LE:
+                Token op = this.look;
+                move();
+                return new RelExpr(op, x, expr());
+            default:
+                return x;
+        }
+    }
+
+    private ExprNode expr() throws IOException {
+        ExprNode x = term();
+        while (this.look.tag == '+' || this.look.tag == '-') {
+            Token op = this.look;
+            move();
+            x = new AirthExpr(op, x, term());
+        }
+        return x;
+    }
+
+    private ExprNode term() throws IOException {
+        ExprNode x = unary();
+        while (this.look.tag == '*' || this.look.tag == '/') {
+            Token op = this.look;
+            move();
+            x = new AirthExpr(op, x, unary());
+        }
+        return x;
+    }
+
+    private ExprNode unary() throws IOException {
+        return null;
     }
 
 

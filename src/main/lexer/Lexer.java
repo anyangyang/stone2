@@ -29,11 +29,11 @@ public class Lexer extends BufferReader {
 
     public void reserve() {
         // 保留字
-        reserve(new KeyWord("if", Tag.IF.getCode()));
-        reserve(new KeyWord("else", Tag.ELSE.getCode()));
-        reserve(new KeyWord("while", Tag.WHILE.getCode()));
-        reserve(new KeyWord("do", Tag.DO.getCode()));
-        reserve(new KeyWord("break", Tag.BREAK.getCode()));
+        reserve(new KeyWord("if", Tag.IF));
+        reserve(new KeyWord("else", Tag.ELSE));
+        reserve(new KeyWord("while", Tag.WHILE));
+        reserve(new KeyWord("do", Tag.DO));
+        reserve(new KeyWord("break", Tag.BREAK));
         reserve(KeyWord.True);
         reserve(KeyWord.False);
         reserve(Type.Int);
@@ -125,7 +125,7 @@ public class Lexer extends BufferReader {
             return word;
         }
 
-        KeyWord id = new KeyWord(s, Tag.ID.getCode());
+        KeyWord id = new KeyWord(s, Tag.ID);
         words.put(id.lexme, id);   // 在符号表中会使用
         return id;
     }

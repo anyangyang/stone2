@@ -10,16 +10,16 @@ public class KeyWord extends Token{
 
 
     public static final KeyWord
-    and = new KeyWord("&&", Tag.AND.getCode()),
-    or = new KeyWord("||", Tag.OR.getCode()),
-    eq = new KeyWord("==", Tag.EQ.getCode()),
-    ne = new KeyWord("!=", Tag.NE.getCode()),
-    le = new KeyWord("<=", Tag.LE.getCode()),
-    ge = new KeyWord(">=", Tag.GE.getCode()),
-    minus = new KeyWord("minus", Tag.MINUS.getCode()),
-    True = new KeyWord("true", Tag.TRUE.getCode()),
-    False = new KeyWord("false", Tag.FALSE.getCode()),
-    temp = new KeyWord("t", Tag.FALSE.getCode());
+    and = new KeyWord("&&", Tag.AND),
+    or = new KeyWord("||", Tag.OR),
+    eq = new KeyWord("==", Tag.EQ),
+    ne = new KeyWord("!=", Tag.NE),
+    le = new KeyWord("<=", Tag.LE),
+    ge = new KeyWord(">=", Tag.GE),
+    minus = new KeyWord("minus", Tag.MINUS),
+    True = new KeyWord("true", Tag.TRUE),
+    False = new KeyWord("false", Tag.FALSE),
+    temp = new KeyWord("t", Tag.FALSE);
 
     public String toString() {
         return lexme;

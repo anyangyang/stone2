@@ -8,10 +8,10 @@ public class Type extends KeyWord{
     }
 
     public static final Type
-        Int = new Type("int", Tag.BASIC.getCode(), 4),
-        Char = new Type("char", Tag.BASIC.getCode(), 1),
-        Bool = new Type("bool", Tag.BASIC.getCode(), 1),
-        Float = new Type("float", Tag.BASIC.getCode(), 8);
+        Int = new Type("int", Tag.BASIC, 4),
+        Char = new Type("char", Tag.BASIC, 1),
+        Bool = new Type("bool", Tag.BASIC, 1),
+        Float = new Type("float", Tag.BASIC, 8);
 
     /**
      *  判断是否能够进行类型转换

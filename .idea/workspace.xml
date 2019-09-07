@@ -2,24 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36c07e46-8b34-4e27-8c1f-c965428936b3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../stone2/src/example/parserTest.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../stone2/src/main/lexer/Array.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/src/main/lex/BufferReader.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/src/main/lex/KeyWord.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/src/main/lex/Lexer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/src/main/lex/Num.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/src/main/lex/Real.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/src/main/lex/Tag.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/src/main/lex/Token.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/src/main/lex/Type.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/Main.class" afterPath="$PROJECT_DIR$/../stone2/target/classes/main/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/parser/Parser.class" afterPath="$PROJECT_DIR$/../stone2/target/classes/main/parser/Parser.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../stone2/src/main/ast/BreakStmt.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../stone2/src/main/ast/IfStmt.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../stone2/src/main/ast/StmtNode.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/Stmt.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/ExprNode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/IdNode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/Node.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/Stmt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/constants/CommonConst.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/Array.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/BufferReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/KeyWord.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/Lexer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/Num.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/Real.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/Tag.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/Token.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/Type.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/parser/Parser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/parser/SymbolTable.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../stone2/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/src/main/Main.java" afterPath="$PROJECT_DIR$/../stone2/src/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/src/example/parserTest.txt" afterPath="$PROJECT_DIR$/../stone2/src/example/parserTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/src/main/lexer/Array.java" afterPath="$PROJECT_DIR$/../stone2/src/main/lexer/Array.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/src/main/lexer/KeyWord.java" afterPath="$PROJECT_DIR$/../stone2/src/main/lexer/KeyWord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/src/main/lexer/Lexer.java" afterPath="$PROJECT_DIR$/../stone2/src/main/lexer/Lexer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/src/main/lexer/Num.java" afterPath="$PROJECT_DIR$/../stone2/src/main/lexer/Num.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/src/main/lexer/Real.java" afterPath="$PROJECT_DIR$/../stone2/src/main/lexer/Real.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/src/main/lexer/Tag.java" afterPath="$PROJECT_DIR$/../stone2/src/main/lexer/Tag.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/src/main/lexer/Type.java" afterPath="$PROJECT_DIR$/../stone2/src/main/lexer/Type.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/src/main/parser/Parser.java" afterPath="$PROJECT_DIR$/../stone2/src/main/parser/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/src/main/parser/SymbolTable.java" afterPath="$PROJECT_DIR$/../stone2/src/main/parser/SymbolTable.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/Expr.java" afterPath="$PROJECT_DIR$/../stone2/src/main/ast/ExprNode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/Id.java" afterPath="$PROJECT_DIR$/../stone2/src/main/ast/IdNode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/stone2.iml" afterPath="$PROJECT_DIR$/../stone2/stone2.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/target/classes/example/parserTest.txt" afterPath="$PROJECT_DIR$/../stone2/target/classes/example/parserTest.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/../stone2/out/" />
     <ignored path="$PROJECT_DIR$/../stone2/target/" />
@@ -43,33 +58,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../stone2/src/main/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SymbolTable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../stone2/src/main/parser/SymbolTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../stone2/src/main/parser/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state relative-caret-position="288">
+              <caret line="266" column="12" lean-forward="false" selection-start-line="266" selection-start-column="12" selection-end-line="266" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1449#1459#0" expanded="true" />
+                <marker date="1567865566070" expanded="false" signature="5507:5518" ph=" { " />
+                <marker date="1567865566070" expanded="false" signature="5588:5594" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IfStmt.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../stone2/src/main/ast/IfStmt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StmtNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../stone2/src/main/ast/StmtNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,22 +95,74 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IdNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../stone2/src/main/ast/IdNode.java">
+      <file leaf-file-name="BreakStmt.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../stone2/src/main/ast/BreakStmt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            <state relative-caret-position="226">
+              <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExprNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../stone2/src/main/ast/ExprNode.java">
+      <file leaf-file-name="KeyWord.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/KeyWord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <state relative-caret-position="394">
+              <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+              <folding>
+                <element signature="e#635#636#0" expanded="true" />
+                <element signature="e#663#664#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Array.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Array.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+              <folding>
+                <marker date="1567861029932" expanded="false" signature="298:309" ph=" { " />
+                <marker date="1567861029932" expanded="false" signature="344:350" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Type.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Type.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Num.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Num.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+              <folding>
+                <marker date="1567861012131" expanded="false" signature="198:209" ph=" { " />
+                <marker date="1567861012131" expanded="false" signature="227:233" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Real.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Real.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+              <folding>
+                <marker date="1567861022530" expanded="false" signature="204:215" ph=" { " />
+                <marker date="1567861022530" expanded="false" signature="233:239" ph=" }" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,48 +170,8 @@
       <file leaf-file-name="Tag.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Tag.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../stone2/src/example/test.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parserTest.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../stone2/src/example/parserTest.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Token.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Token.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lexer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Lexer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="78">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -156,6 +186,13 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>stmts</find>
+      <find>.getCode()</find>
+      <find>getToken</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../stone2" />
@@ -187,11 +224,21 @@
         <option value="$PROJECT_DIR$/../stone2/src/main/lex/Token.java" />
         <option value="$PROJECT_DIR$/../stone2/src/main/lex/BufferReader.java" />
         <option value="$PROJECT_DIR$/../stone2/src/main/lex/Lexer.java" />
-        <option value="$PROJECT_DIR$/../stone2/src/main/lexer/Array.java" />
         <option value="$PROJECT_DIR$/../stone2/src/main/Main.java" />
         <option value="$PROJECT_DIR$/../stone2/src/main/parser/SymbolTable.java" />
-        <option value="$PROJECT_DIR$/../stone2/src/main/parser/Parser.java" />
+        <option value="$PROJECT_DIR$/../stone2/src/main/ast/Stmt.java" />
         <option value="$PROJECT_DIR$/../stone2/src/example/parserTest.txt" />
+        <option value="$PROJECT_DIR$/../stone2/src/main/lexer/Lexer.java" />
+        <option value="$PROJECT_DIR$/../stone2/src/main/lexer/KeyWord.java" />
+        <option value="$PROJECT_DIR$/../stone2/src/main/lexer/Type.java" />
+        <option value="$PROJECT_DIR$/../stone2/src/main/lexer/Num.java" />
+        <option value="$PROJECT_DIR$/../stone2/src/main/lexer/Real.java" />
+        <option value="$PROJECT_DIR$/../stone2/src/main/lexer/Array.java" />
+        <option value="$PROJECT_DIR$/../stone2/src/main/lexer/Tag.java" />
+        <option value="$PROJECT_DIR$/../stone2/src/main/ast/StmtNode.java" />
+        <option value="$PROJECT_DIR$/../stone2/src/main/ast/IfStmt.java" />
+        <option value="$PROJECT_DIR$/../stone2/src/main/ast/BreakStmt.java" />
+        <option value="$PROJECT_DIR$/../stone2/src/main/parser/Parser.java" />
       </list>
     </option>
   </component>
@@ -236,18 +283,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="stone2" type="58d84e3e:PackageViewProjectNode" />
-              <item name="stone2" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -301,13 +336,25 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="stone2" type="58d84e3e:PackageViewProjectNode" />
+              <item name="stone2" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="D:/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15307692" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="tri&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/com/sun/javafx/fxml/builder/TriangleMeshBuilder.java" />
@@ -445,38 +492,40 @@
       <workItem from="1567424213072" duration="10408000" />
       <workItem from="1567600706545" duration="1470000" />
       <workItem from="1567610857207" duration="984000" />
-      <workItem from="1567688803292" duration="3985000" />
+      <workItem from="1567688803292" duration="5704000" />
+      <workItem from="1567857259697" duration="7206000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31194000" />
+    <option name="totallyTimeSpent" value="40119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20954692" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19902913" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3716952" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3716952" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -500,64 +549,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/../stone2/src/main/parser/Parser.java</url>
-          <line>29</line>
+          <line>73</line>
           <properties />
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/../stone2/src/main/parser/Parser.java</url>
-          <line>55</line>
-          <properties />
-          <option name="timeStamp" value="61" />
+          <option name="timeStamp" value="66" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="62" />
+      <option name="time" value="67" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../stone2/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/RuntimeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="60" column="11" lean-forward="false" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
-          <folding>
-            <element signature="e#1598#1599#0" expanded="false" />
-            <element signature="e#1628#1629#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/stone/Lexer.java" />
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/stone/Token.java" />
     <entry file="file://$PROJECT_DIR$/../stone2/src/main/stone/exception/StoneException.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/RuntimeException.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -607,7 +611,7 @@
         <state relative-caret-position="52">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -654,109 +658,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="253" column="15" lean-forward="false" selection-start-line="253" selection-start-column="15" selection-end-line="253" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lex/Real.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lex/Tag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lex/Type.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1066">
-          <caret line="41" column="25" lean-forward="false" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lex/KeyWord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lex/Lexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1456">
-          <caret line="58" column="20" lean-forward="false" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Type.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-658">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Array.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding>
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lex/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lex/Num.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lex/BufferReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="38" column="6" lean-forward="true" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Num.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Tag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lex/Real.java" />
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lex/Tag.java" />
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lex/Type.java" />
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lex/KeyWord.java" />
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lex/Lexer.java" />
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lex/Token.java" />
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lex/Num.java" />
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lex/BufferReader.java" />
     <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Token.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
@@ -765,34 +677,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Lexer.java">
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/parser/SymbolTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="650">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/parser/SymbolTable.java">
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="520">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../stone2/src/main/ast/ExprNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/ast/IdNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        <state relative-caret-position="104">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -805,30 +711,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/example/parserTest.txt">
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/ast/IdNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
-          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/../stone2/src/example/parserTest.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="156">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/ast/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Lexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="32" column="47" lean-forward="false" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+          <folding>
+            <element signature="e#1086#1087#0" expanded="true" />
+            <element signature="e#1129#1130#0" expanded="true" />
+            <element signature="e#2167#2168#0" expanded="true" />
+            <element signature="e#2225#2226#0" expanded="true" />
+            <marker date="1567860962655" expanded="false" signature="3512:3523" ph=" { " />
+            <marker date="1567860962655" expanded="false" signature="3567:3573" ph=" }" />
+            <marker date="1567860962655" expanded="false" signature="3605:3616" ph=" { " />
+            <marker date="1567860962655" expanded="false" signature="3653:3659" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/KeyWord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding>
+            <element signature="e#635#636#0" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Num.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <marker date="1567861012131" expanded="false" signature="198:209" ph=" { " />
+            <marker date="1567861012131" expanded="false" signature="227:233" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Real.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding>
+            <marker date="1567861022530" expanded="false" signature="204:215" ph=" { " />
+            <marker date="1567861022530" expanded="false" signature="233:239" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Array.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <marker date="1567861029932" expanded="false" signature="298:309" ph=" { " />
+            <marker date="1567861029932" expanded="false" signature="344:350" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/lexer/Tag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/ast/StmtNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/ast/IfStmt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stone2/src/main/ast/BreakStmt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../stone2/src/main/parser/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state relative-caret-position="288">
+          <caret line="266" column="12" lean-forward="false" selection-start-line="266" selection-start-column="12" selection-end-line="266" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1449#1459#0" expanded="true" />
+            <marker date="1567865566070" expanded="false" signature="5507:5518" ph=" { " />
+            <marker date="1567865566070" expanded="false" signature="5588:5594" ph=" }" />
           </folding>
         </state>
       </provider>

@@ -6,7 +6,7 @@ public class Array extends Type {
     public int size;     // 数组个数，默认为 1
 
     public Array(Type of, int size) {
-        super("[]", Tag.INDEX.getCode(), of.weight * size);
+        super("[]", Tag.INDEX, of.weight * size);
         this.of = of;
         this.size = size;
     }
