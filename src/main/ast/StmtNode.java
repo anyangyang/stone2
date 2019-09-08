@@ -13,5 +13,5 @@ public class StmtNode extends Node {
      *  用于保存当前 break 语句所处的 while 循环内部
      */
 
-    public static List<StmtNode> Enclosing = new ArrayList<>();
+    public static List<StmtNode> Enclosing = new ArrayList();
 }

@@ -146,9 +146,9 @@ public class Lexer extends BufferReader {
         for (; ; getChar()) {
             // TODO 跳过行注释和块注释
 
-            if (this.peek == ' ' || this.peek == '\t') {
+            if (this.peek == ' ' || this.peek == '\t' || this.peek == '\r') {
                 continue;
-            } else if (this.peek == '\n' || this.peek == '\r') {
+            } else if (this.peek == '\n' ) {
                 line++;
             } else {
                 break;

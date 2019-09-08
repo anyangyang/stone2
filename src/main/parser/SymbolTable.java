@@ -23,7 +23,7 @@ public class SymbolTable {
 
     public IdNode get(Token token) {
         for(SymbolTable table = this; table != null; table = table.prev) {
-            IdNode found = table.get(token);
+            IdNode found = (IdNode)table.map.get(token);
             if(found != null) {
                 return found;
             }

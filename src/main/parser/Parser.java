@@ -61,6 +61,7 @@ public class Parser {
         decls();
         // 处理语句
         List<StmtNode> stmtList = stmts();
+//        List<StmtNode> stmtList = null;
         this.curTable = saveTable;  // 恢复符号表
         match('}');
 
@@ -92,8 +93,6 @@ public class Parser {
      * @return
      */
     private void stmt(List<StmtNode> stmtList) throws IOException {
-
-        StmtNode stmt = null;
         switch (this.look.tag) {
             // 空语句
             case ';':
@@ -127,16 +126,67 @@ public class Parser {
         }
     }
 
-    private StmtNode doStmt() {
-        return null;
+    private StmtNode doStmt() throws IOException {
+        List<StmtNode> stmtList = new ArrayList<StmtNode>();
+        DoStmt doStmt= new DoStmt();
+        StmtNode.Enclosing.add(doStmt);     // 为了处理 break 语句
+         match(Tag.DO);
+         stmt(stmtList);
+         match(Tag.WHILE);
+         match('(');
+         ExprNode expr = bool();
+         match(')');
+         match(';');
+         doStmt.init(expr, stmtList);
+         // 退出当前循环
+        StmtNode.Enclosing.remove(StmtNode.Enclosing.size() - 1);
+
+        return doStmt;
     }
 
-    private StmtNode whileStmt() {
-        return null;
+    private StmtNode whileStmt() throws IOException {
+        List<StmtNode> stmtList = new ArrayList<StmtNode>();
+        WhileStmt whileStmt= new WhileStmt();
+        StmtNode.Enclosing.add(whileStmt);     // 为了处理 break 语句
+        match(Tag.WHILE);
+        match('(');
+        ExprNode expr = bool();
+        match(')');
+        stmt(stmtList);
+        whileStmt.init(expr, stmtList);
+        // 退出当前循环
+        StmtNode.Enclosing.remove(StmtNode.Enclosing.size() - 1);
+        return new StmtNode();
     }
 
-    private StmtNode assignStmt() {
-        return null;
+    /**
+     * 处理赋值语句
+     *
+     * @return
+     * @throws IOException
+     */
+    private StmtNode assignStmt() throws IOException {
+        Token token = this.look;
+        match(Tag.ID);
+        IdNode id = curTable.get(token);
+        if(id == null) {
+            error("id [ " + token.toString() + " ] undeclare");
+        }
+
+        StmtNode assignStmt = null;
+        if(this.look.tag == '=') {
+            move();
+            assignStmt = new SetStmt(id, bool());
+        }
+        // 数组赋值
+        else {
+            ArrayAccess x = arrayAccess(id);
+            match('=');
+            assignStmt = new SetElemStmt(x, bool());
+        }
+
+        match(';');
+        return assignStmt;
     }
 
     /**
@@ -145,18 +195,18 @@ public class Parser {
      * @return
      */
     private StmtNode ifStmt() throws IOException {
-        List<StmtNode> ifBody = new ArrayList<>(), elseBody = null;
-        move();
+        List<StmtNode> ifBody = new ArrayList(), elseBody = null;
+        match(Tag.IF);
         match('(');
         ExprNode boolExpr = bool();     // 解析布尔表达式
         match(')');
         stmt(ifBody);
         if (this.look.tag == Tag.ELSE) {
-            elseBody = new ArrayList<>();
+            elseBody = new ArrayList();
             stmt(elseBody);
         }
 
-        move();
+//        move();
         return new IfStmt(boolExpr, ifBody, elseBody);
     }
 
@@ -362,9 +412,108 @@ public class Parser {
         return x;
     }
 
+    /**
+     * 处理单目运算符
+     *
+     * @return
+     * @throws IOException
+     */
     private ExprNode unary() throws IOException {
+        if (this.look.tag == '-') {
+            move();
+            return new UnaryExpr(KeyWord.minus, unary());
+        } else if (this.look.tag == '!') {
+            Token op = this.look;
+            move();
+            return new NotExpr(op, unary());
+        } else {
+            return factor();
+        }
+    }
+
+    /**
+     * factor -----> num  (正数)
+     * real (实数)
+     * id  (变量)
+     * Bool.True
+     * Bool.False
+     * ( expr )
+     *
+     * @return
+     */
+    private ExprNode factor() throws IOException {
+        ExprNode expr = null;
+        switch (this.look.tag) {
+            case Tag.NUM:
+                expr = new ConstNode(this.look, Type.Int);
+                move();
+                return expr;
+
+            case Tag.REAL:
+                expr = new ConstNode(this.look, Type.Float);
+                move();
+                return expr;
+
+            case Tag.TRUE:
+                expr = ConstNode.True;
+                move();
+                return expr;
+
+            case Tag.FALSE:
+                expr = ConstNode.False;
+                move();
+                return expr;
+
+            case Tag.ID:
+                IdNode id = curTable.get(this.look);
+                if (id == null) {
+                    error("id [ " + this.look.toString() + " ] undeclare");
+                }
+                move();
+                // 如果不是数组
+                if (this.look.tag != '[') {
+                    return id;
+                }
+                return arrayAccess(id);
+            default:
+                error("syntax error");
+        }
+
         return null;
     }
 
+    private ArrayAccess arrayAccess(IdNode id) throws IOException {
+        Type type = id.type;    // 获取到数组类型
+        match('[');
+        ExprNode index = bool();
+        match(']');
+        /**
+         *  因为数组的定义是一段连续的内存，所以需要计算实际的位置
+         *  这里暂时不做数组越界的检查
+         */
+        Token multiply = new Token('*');
+        Token add = new Token('+');
+
+        /**
+         *  考虑一维数组的情况，我们需要该基本类型的长度
+         */
+        type = ((Array)type).of;
+        ExprNode location = new AirthExpr(multiply, index, new ConstNode(type.weight));
+        // 如果是多维数组,  需要重新计算实际的位置
+        while (this.look.tag == '[') {
+            type = ((Array) type).of;
+            match('[');
+            index = bool();
+            match(']');
+            /**
+             *  开始重新计算，首先计算当前维度的位置 ，再累加之前计算的其他维度的位置
+             */
+            ExprNode index2 = new AirthExpr(multiply, index, new ConstNode(type.weight));
+            location = new AirthExpr(add, location, index2);
+        }
+
+        // ps: 循环结束之后，type 会变成基本类型
+        return new ArrayAccess(id, location, type);
+    }
 
 }
