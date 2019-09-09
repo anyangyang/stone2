@@ -35,15 +35,15 @@ public class Parser {
      *
      * @return
      */
-    public void parser() throws IOException {
-        program();
+    public List<StmtNode> parser() throws IOException {
+        return program();
     }
 
     /**
      * program -->   block
      */
-    public void program() throws IOException {
-        block();
+    public  List<StmtNode> program() throws IOException {
+        return block();
     }
 
 

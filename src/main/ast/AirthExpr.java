@@ -3,6 +3,9 @@ package main.ast;
 import main.lexer.Token;
 import main.lexer.Type;
 
+/**
+ *   算术表达式
+ */
 public class AirthExpr extends OpExpr {
     public ExprNode expr1;
     public ExprNode expr2;
@@ -15,5 +18,18 @@ public class AirthExpr extends OpExpr {
         if(super.type == null) {
             error("type error");
         }
+    }
+
+    /**
+     * 规约子表达式，生成最终的语句
+     * @return
+     */
+    @Override
+    public ExprNode gen() {
+        return new AirthExpr(token, expr1.reduce(), expr2.reduce());
+    }
+    // 用于打印语句
+    public String toString() {
+        return expr1.toString() + " " + token.toString() + " " + expr2.toString();
     }
 }

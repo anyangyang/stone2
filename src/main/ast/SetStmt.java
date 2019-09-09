@@ -26,4 +26,8 @@ public class SetStmt extends StmtNode{
 
         return null;
     }
+
+    public void gen(int begin, int after) {
+        emit(id.toString() + " = " + expr.reduce().toString());
+    }
 }

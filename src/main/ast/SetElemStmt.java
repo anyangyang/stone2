@@ -32,4 +32,12 @@ public class SetElemStmt extends StmtNode {
 
         return null;
     }
+
+    public void gen(int begin, int after) {
+        ExprNode locationTemp = location.reduce();
+        ExprNode expr1 = expr.reduce();
+        emit(array.toString() + " [ " + locationTemp.toString() + " ] " + " = " + expr1.toString());
+    }
+
+
 }

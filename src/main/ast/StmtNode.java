@@ -14,4 +14,7 @@ public class StmtNode extends Node {
      */
 
     public static List<StmtNode> Enclosing = new ArrayList();
+
+    // 用于语句生成中间代码
+    public void gen(int begin, int after) {}
 }

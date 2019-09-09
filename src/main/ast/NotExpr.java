@@ -10,5 +10,5 @@ public class NotExpr extends LogicalExpr {
          * 具体可以查看 LogicalExpr 的构造器中调用的 check()
          */
         super(token, expr1, expr1);
-}
+    }
 }

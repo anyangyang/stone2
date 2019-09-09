@@ -19,7 +19,7 @@ public class KeyWord extends Token{
     minus = new KeyWord("minus", Tag.MINUS),
     True = new KeyWord("true", Tag.TRUE),
     False = new KeyWord("false", Tag.FALSE),
-    temp = new KeyWord("t", Tag.FALSE);
+    temp = new KeyWord("t", Tag.TEMP);
 
     public String toString() {
         return lexme;

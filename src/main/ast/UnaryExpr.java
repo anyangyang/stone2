@@ -18,4 +18,12 @@ public class UnaryExpr extends OpExpr {
         }
     }
 
+    @Override
+    public ExprNode gen() {
+        return new UnaryExpr(token, expr.reduce());
+    }
+
+    public String toString() {
+        return token.toString() + " " + expr.toString();
+    }
 }
