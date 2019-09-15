@@ -21,4 +21,13 @@ public class ConstNode extends ExprNode {
             False = new ConstNode(KeyWord.False, Type.Bool);
 
 
+    public void jumping(int t, int f) {
+        if(this == True && t != 0) {
+            emit("goto L" + t);
+        }
+
+        else if (this == False && f != 0) {
+            emit("goto L" + f);
+        }
+    }
 }

@@ -17,4 +17,10 @@ public class BreakStmt extends StmtNode{
         }
     }
 
+    public  void gen(int b, int a) {
+        if(stmt.after == 0) {
+            error("break error");
+        }
+        emit("goto L" + stmt.after);
+    }
 }

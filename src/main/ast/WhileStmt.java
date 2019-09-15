@@ -16,4 +16,15 @@ public class WhileStmt extends StmtNode {
         this.expr = expr;
         this.stmtBody = stmtBody;
     }
+
+    public void gen(int b, int a) {
+        // 记录 do 语句的出口
+        this.after = a;
+        expr.jumping(0, a);
+        int stmtLable = newLable();
+        emitLabel(stmtLable);
+        bodyGen(stmtBody, stmtLable, a);
+        emit("goto L" + b);   // 跳回到语句开始的地方，重新进行条件表达式的判断
+    }
+
 }

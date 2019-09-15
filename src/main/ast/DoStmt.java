@@ -16,4 +16,15 @@ public class DoStmt extends StmtNode {
         this.expr = expr;
         this.stmtBody = stmtBody;
     }
+
+    public void gen(int b, int a) {
+        // 记录 do 语句的出口
+        after = a;
+        int exprLabel = newLable();   // 测试表达式的开始标号
+
+        // 生成语句
+        bodyGen(stmtBody, b, exprLabel);
+        emitLabel(exprLabel);
+        expr.jumping(b, 0);
+    }
 }

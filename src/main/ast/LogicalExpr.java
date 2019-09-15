@@ -29,4 +29,23 @@ public class LogicalExpr extends ExprNode {
         return null;
     }
 
+
+    /**
+     *  对表达式进行赋值
+     * @return
+     */
+    public ExprNode gen() {
+        int f = newLable();   // 如果表达式的值为 false，那么跳到给这个 t  = false
+        int a = newLable();
+
+        Temp temp = new Temp(type);
+        this.jumping(0, f);
+        emit(temp.toString() + " = true");
+        emit("goto L" + a);   // 跳出赋值
+        emitLabel(f);
+        emit(temp.toString() + " = false");
+        emitLabel(a);
+        return temp;
+    }
+
 }

@@ -39,6 +39,35 @@ public class ExprNode extends Node {
         return this;
     }
 
+
+    public void jumping(int t, int f) {
+        emitJumps(token.toString(), t, f);
+    }
+
+    /**
+     *
+     * @param test:  条件表达式
+     * @param t:  如果条件表达式的结果是  true，需要跳转的出口，如果值为 0，不进行跳转
+     * @param f:  如果条件表达式的结果是  false，需要跳转的出口，如果值为 0，不进行跳转
+     *
+     */
+    public void emitJumps(String test, int t, int f) {
+        if(t != 0 && f != 0) {
+            emit("if " + test + " goto L" + t);
+            emit("goto L" + f);
+        }
+
+        else if(t != 0) {
+            emit("if " + test + " goto L" + t);
+        }
+
+        else if(f != 0) {
+            emit("iffalse " + test + " goto L" + t);
+        }
+
+        // 如果 t = 0， f = 0 什么都不做
+    }
+
     public String toString() {
         return token.toString();
     }

@@ -16,14 +16,16 @@ import java.util.List;
 public class Main {
 
     // windows 下 lexer 测试文件
-    private static final String lexTestFileName = "E:\\stone2\\src\\example\\test.txt";
+    private static final String lexTestFileName = "E:\\stone2\\src\\example\\lexTest.txt";
     // parser 测试文件
     private static final String parserTestFileName = "E:\\stone2\\src\\example\\parserTest.txt";
     // 中间代码生成测试文件
     private static final String genTestFileName = "E:\\stone2\\src\\example\\genTest.txt";
+    // 中间代码生成测试文件:
+    private static final String genTestFileName2 = "E:\\stone2\\src\\example\\genTest2.txt";
 
     public static void main(String[] args) throws Exception{
-        FileInputStream reader = initReader(genTestFileName);
+        FileInputStream reader = initReader(genTestFileName2);
         try{
             Lexer lexer = new Lexer(reader);
 //            Token token = lexer.nextToken();

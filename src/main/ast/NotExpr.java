@@ -11,4 +11,9 @@ public class NotExpr extends LogicalExpr {
          */
         super(token, expr1, expr1);
     }
+
+
+    public void gen(int t, int f) {
+        expr2.jumping(f, t);
+    }
 }

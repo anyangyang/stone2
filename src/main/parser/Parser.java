@@ -117,6 +117,8 @@ public class Parser {
                 break;
             // break 语句
             case Tag.BREAK:
+                move();
+                match(';');
                 stmtList.add(new BreakStmt());
                 break;
             // 赋值
@@ -156,7 +158,7 @@ public class Parser {
         whileStmt.init(expr, stmtList);
         // 退出当前循环
         StmtNode.Enclosing.remove(StmtNode.Enclosing.size() - 1);
-        return new StmtNode();
+        return whileStmt;
     }
 
     /**
