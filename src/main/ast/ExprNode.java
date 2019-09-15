@@ -62,7 +62,7 @@ public class ExprNode extends Node {
         }
 
         else if(f != 0) {
-            emit("iffalse " + test + " goto L" + t);
+            emit("iffalse " + test + " goto L" + f);
         }
 
         // 如果 t = 0， f = 0 什么都不做
