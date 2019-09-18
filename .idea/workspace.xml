@@ -2,87 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36c07e46-8b34-4e27-8c1f-c965428936b3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/example/genTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/example/genTest2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/example/lexTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/example/parserTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/AirthExpr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/AndExpr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/ArrayAccess.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/BreakStmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/ConstNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/DoStmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/ExprNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/IdNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/IfStmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/LogicalExpr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/Node.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/NotExpr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/OpExpr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/OrExpr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/RelExpr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/SetElemStmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/SetStmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/StmtNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/Temp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/UnaryExpr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/ast/WhileStmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/constants/CommonConst.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/gen/Generator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/Array.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/BufferReader.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/KeyWord.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/Lexer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/Num.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/Real.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/Tag.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/Token.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/lexer/Type.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/parser/Parser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/parser/SymbolTable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../stone2/target/classes/main/util/ListUtil.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../stone2/src/parts2/Main/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../stone2/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/example/genTest.txt" afterPath="$PROJECT_DIR$/../stone2/src/parts1/example/genTest.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/example/genTest2.txt" afterPath="$PROJECT_DIR$/../stone2/src/parts1/example/genTest2.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/example/lexTest.txt" afterPath="$PROJECT_DIR$/../stone2/src/parts1/example/lexTest.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/example/parserTest.txt" afterPath="$PROJECT_DIR$/../stone2/src/parts1/example/parserTest.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/Main.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/AirthExpr.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/AirthExpr.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/AndExpr.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/AndExpr.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/ArrayAccess.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/ArrayAccess.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/BreakStmt.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/BreakStmt.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/ConstNode.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/ConstNode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/DoStmt.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/DoStmt.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/ExprNode.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/ExprNode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/IdNode.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/IdNode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/IfStmt.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/IfStmt.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/LogicalExpr.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/LogicalExpr.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/Node.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/Node.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/NotExpr.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/NotExpr.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/OpExpr.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/OpExpr.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/OrExpr.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/OrExpr.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/RelExpr.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/RelExpr.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/SetElemStmt.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/SetElemStmt.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/SetStmt.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/SetStmt.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/StmtNode.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/StmtNode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/Temp.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/Temp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/UnaryExpr.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/UnaryExpr.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/ast/WhileStmt.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/ast/WhileStmt.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/constants/CommonConst.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/constants/CommonConst.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/gen/Generator.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/gen/Generator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/lexer/Array.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/lexer/Array.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/lexer/BufferReader.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/lexer/BufferReader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/lexer/KeyWord.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/lexer/KeyWord.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/lexer/Lexer.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/lexer/Lexer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/lexer/Num.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/lexer/Num.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/lexer/Real.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/lexer/Real.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/lexer/Tag.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/lexer/Tag.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/lexer/Token.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/lexer/Token.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/lexer/Type.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/lexer/Type.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/parser/Parser.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/parser/Parser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/parser/SymbolTable.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/parser/SymbolTable.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../stone2/src/main/util/ListUtil.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/util/ListUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../stone2/src/parts1/main/Main.java" afterPath="$PROJECT_DIR$/../stone2/src/parts1/main/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../stone2/out/" />
     <ignored path="$PROJECT_DIR$/../stone2/target/" />
@@ -106,26 +28,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OpExpr.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../stone2/src/parts1/main/ast/OpExpr.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DoStmt.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../stone2/src/parts1/main/ast/DoStmt.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ArrayAccess.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../stone2/src/parts1/main/ast/ArrayAccess.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -206,12 +108,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../stone2/src/parts1/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-65">
-              <caret line="22" column="77" lean-forward="false" selection-start-line="22" selection-start-column="77" selection-end-line="22" selection-end-column="77" />
+            <state relative-caret-position="-78">
+              <caret line="27" column="2" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lexer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../stone2/src/parts1/main/lexer/Lexer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2856">
+              <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../stone2/src/parts2/Main/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="65">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -245,7 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../stone2/src/main/stone/exception/StoneException.java" />
         <option value="$PROJECT_DIR$/../stone2/src/main/stone/Token.java" />
         <option value="$PROJECT_DIR$/../stone2/src/main/chapter3/LexerRunner.java" />
         <option value="$PROJECT_DIR$/../stone2/src/main/lex/Tag.java" />
@@ -296,6 +219,7 @@
         <option value="$PROJECT_DIR$/../stone2/src/main/ast/ExprNode.java" />
         <option value="$PROJECT_DIR$/../stone2/src/parts1/main/ast/IfStmt.java" />
         <option value="$PROJECT_DIR$/../stone2/src/parts1/main/Main.java" />
+        <option value="$PROJECT_DIR$/../stone2/src/parts2/Main/Main.java" />
       </list>
     </option>
   </component>
@@ -367,14 +291,14 @@
               <item name="stone2" type="b2602c69:ProjectViewProjectNode" />
               <item name="stone2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="parts1" type="462c0819:PsiDirectoryNode" />
+              <item name="parts2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="stone2" type="b2602c69:ProjectViewProjectNode" />
               <item name="stone2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="parts1" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="parts2" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="stone2" type="b2602c69:ProjectViewProjectNode" />
@@ -397,14 +321,15 @@
     <property name="SearchEverywhereHistoryKey" value="tri&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/com/sun/javafx/fxml/builder/TriangleMeshBuilder.java" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\stone2\src\example" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="main.ast" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\stone2\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="parts2.Main" />
+      <recent name="main.ast" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\stone2\src\example" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -543,12 +468,12 @@
       <workItem from="1568462283222" duration="944000" />
       <workItem from="1568523482121" duration="14025000" />
       <workItem from="1568727328371" duration="696000" />
-      <workItem from="1568812576369" duration="957000" />
+      <workItem from="1568812576369" duration="1868000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83010000" />
+    <option name="totallyTimeSpent" value="83921000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -615,13 +540,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../stone2/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/CharacterData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1066">
@@ -760,20 +678,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../stone2/src/parts1/main/lexer/Lexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="36" column="23" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../stone2/src/parts1/main/ast/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
           <caret line="39" column="47" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
           <folding>
-            <element signature="e#595#596#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#595#596#0" expanded="false" />
+            <element signature="e#649#650#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -951,11 +862,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../stone2/src/parts1/main/lexer/Lexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2856">
+          <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../stone2/src/parts1/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-65">
-          <caret line="22" column="77" lean-forward="false" selection-start-line="22" selection-start-column="77" selection-end-line="22" selection-end-column="77" />
+        <state relative-caret-position="-78">
+          <caret line="27" column="2" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stone2/src/parts2/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
