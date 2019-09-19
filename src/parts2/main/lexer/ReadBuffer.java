@@ -1,6 +1,6 @@
-package parts2.Main.lexer;
+package parts2.main.lexer;
 
-import parts2.Main.util.ListUtil;
+import parts2.main.util.ListUtil;
 
 import java.io.IOException;
 import java.io.Reader;

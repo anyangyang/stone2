@@ -1,4 +1,4 @@
-package parts2.Main.lexer;
+package parts2.main.lexer;
 
 public class Token {
     public int tag;

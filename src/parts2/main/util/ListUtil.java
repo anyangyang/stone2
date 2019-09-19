@@ -1,4 +1,4 @@
-package parts2.Main.util;
+package parts2.main.util;
 
 import java.util.List;
 
