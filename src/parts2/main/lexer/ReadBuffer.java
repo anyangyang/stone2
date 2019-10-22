@@ -2,6 +2,7 @@ package parts2.main.lexer;
 
 import parts2.main.util.ListUtil;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ import java.util.List;
  */
 public class ReadBuffer {
 
-    public Reader reader;
+    public FileInputStream reader;
 
     /**
      *  字符缓存大小
@@ -34,7 +35,9 @@ public class ReadBuffer {
      */
     public int peek = -1;
 
-    public ReadBuffer(Reader reader) {
+    public static final int EOF = -1;
+
+    public ReadBuffer(FileInputStream reader) {
         this.reader = reader;
     }
 
@@ -83,4 +86,12 @@ public class ReadBuffer {
         this.peek = -1;
     }
 
+    /**
+     *  错误处理函数， 用于报告一个错误
+     *  格式：当前步骤（词法分析）- 行数 - 错误信息
+     * @param errMsg
+     */
+    public void error(String errMsg) {
+        throw new RuntimeException("lexer - " + this.lineNum + " - " + errMsg);
+    }
 }

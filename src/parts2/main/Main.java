@@ -1,6 +1,7 @@
 package parts2.main;
 
 import org.apache.commons.lang3.StringUtils;
+import parts2.main.lexer.Lexer;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -17,10 +18,10 @@ public class Main {
         FileInputStream reader = initReader(lexTestFileName);
         try{
             // 开始设计词法分析器
+            Lexer lexer = new Lexer(reader);
+            // 递归下降的语法分析器, 构造成抽象语法树
 
-            // 递归下降的语法分析器
-
-            // 解释执行
+            // 解释器解释执行
 
         } finally {
             if(reader != null) {

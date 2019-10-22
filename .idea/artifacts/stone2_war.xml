@@ -1,6 +1,12 @@
 <component name="ArtifactManager">
   <artifact type="war" name="stone2:war">
-    <output-path>$PROJECT_DIR$/../stone2/target</output-path>
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>stone2</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
     <root id="archive" name="anyang.war">
       <element id="artifact" artifact-name="stone2:war exploded" />
     </root>

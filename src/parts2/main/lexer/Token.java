@@ -11,4 +11,8 @@ public class Token {
      *  文件结束符
      */
     public static Token EOF = new Token(-1);
+
+    public String toString() {
+        return "" + tag;
+    }
 }
